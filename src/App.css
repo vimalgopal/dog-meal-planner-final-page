@@ -1,38 +1,210 @@
-.App {
+@media screen and (min-width: 576px) {
+  .mobile-view {
+    background-color: #f8f9fa;
+    width: 414px;
+    height: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+  }
+
+  .profile-header {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.profile-header {
+  min-height: 20vh;
+  background-color: #ffc700;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dog-name {
+  margin-top: -158px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.dog-breed {
+  margin-top: 150px;
+  text-align: center;
+  margin-bottom: 5px;
+
+}
+
+.profile-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-picture {
+  margin: 0 auto;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.image-profile {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.meal-results {
+  padding-top: 20px;
+  padding-bottom: 7px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.meal-calories-heading {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: space-between;
+}
+
+.meal-box {
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+
+}
+
+.box-items {
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+} 
+
+.left-item {
+  border-right: solid 1px #ffc700;
+}
+
+.right-item {
+  border-left: solid 1px #ffc700;
+}
+
+.box-item-heading {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.pill-selector__button {
+  font-family: WalsheimBold, Helvetica Neue, sans-serif;
+  width: 100%;
+  border: 1px solid;
+  font-size: .8rem;
+  line-height: 2;
+  padding: 3px 0;
+  transition: all .2s ease-in;
+  color: rgb(255, 199, 0);
+  border-color: rgb(255, 199, 0);
+  background-color: white;
+  -webkit-tap-highlight-color: transparent
+}
+
+.pill-selector__button_active {
+  background-color: #ffc700;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.pill-selector__button:focus {
+  outline: none
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pill-selector {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center
+}
+
+.pill-selector :not(:last-child) {
+  border-right: 0
+}
+
+.pill-selector :first-child {
+  border-top-left-radius: 21px;
+  border-bottom-left-radius: 21px
+}
+
+.pill-selector :last-child {
+  border-top-right-radius: 21px;
+  border-bottom-right-radius: 21px
+}
+
+.customization-section .pill-selector {
+  padding: 0 48px
+}
+
+@media only screen and (min-width:768px) {
+  .customization-section .pill-selector {
+    display: none
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.ingredients_details {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #aaa;
+  box-sizing: border-box;
+  margin: 10px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 7px;
+  text-align: center;
+}
+.ingredient-card__icon {
+  text-align: center;
+  margin: 10px 0 30px
+}
+@media only screen and (min-width:1040px) {
+  .ingredient-card__icon {
+      margin: 15px 15px 0
+  }
+}
+.ingredient-card__icon__img {
+  width: 125px;
+  height: 125px;
+}
+.meals-quantity{
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+.meal-notes{
+  padding: 5px;
+  font-size: 15px;
+  color: rgb(119, 113, 113);
+}
+.footer {
+  padding-top: 7px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffc700;
+  text-align: center;
+  height:2em;
+}
+
+@media only screen and (min-width:768px) {
+  .footer{
+border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   }
 }
